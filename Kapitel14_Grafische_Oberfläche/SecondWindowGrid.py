@@ -21,21 +21,21 @@ screenResolution = (
 )  # workaround to avoid hard-coding tkinter windows
 window.geometry(screenResolution)
 
-# defining and adding a border to the window
-border = Frame(window, relief="ridge", borderwidth=5)
-border.pack(fill="both", expand=1)
+# defining and adding a frame to the window
+frame = Frame(window, relief="ridge", borderwidth=5)
+frame.pack(fill="both", expand=1)
 
 # adding strings into the tkinter output
 window.title("Python-Kurs")
-label = Label(border, text="Willkommen zum Python-Kurs!")
-label.grid(row = 1, column = 1, columnspan = 2)
+label = Label(frame, text="Willkommen zum Python-Kurs!")
+label.grid(row = 1, column = 1, columnspan = 2, pady = 15, padx = 50)
 
 # defining a tkinter-button
-button2 = MyButton(border, width = 10, text="Action!")
+button2 = MyButton(frame, width = 10, text="Action!")
 button2["command"] = button2.action
-button2.grid(row = 2, column = 1)
+button2.grid(row = 2, column = 1, pady = 10)
 
-button = Button(border, text="OK", width = 10, command=window.destroy)
+button = Button(frame, text="OK", width = 10, command=window.destroy)
 button.grid(row = 2, column = 2)
 
 window.mainloop()
