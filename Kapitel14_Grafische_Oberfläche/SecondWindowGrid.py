@@ -28,7 +28,7 @@ border.pack(fill="both", expand=1)
 # adding strings into the tkinter output
 window.title("Python-Kurs")
 label = Label(border, text="Willkommen zum Python-Kurs!")
-label.grid(row = 1, column = 1)
+label.grid(row = 1, column = 1, columnspan = 2)
 
 # defining a tkinter-button
 button2 = MyButton(border, width = 10, text="Action!")
